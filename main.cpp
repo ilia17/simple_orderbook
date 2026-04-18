@@ -103,7 +103,7 @@ Node* delete_level(Node* head, double price){
         delete to_delete;
         return head;
     }
-    while (current != nullptr){
+    while (current != nullptr && current->next != nullptr){
         if (current->next->price == price){
             Node* to_delete = current->next;
             current->next = current->next->next;
